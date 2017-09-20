@@ -42,7 +42,7 @@ if __name__ == "__main__":
             Raptors.append(experienced.pop())
             turn = 1
 
-    # Assignes experienced kids among the three teams
+    # Assigns experienced kids among the three teams
     while len(not_experienced):
         if turn == 1:
             Sharks.append(not_experienced.pop())
@@ -58,6 +58,29 @@ if __name__ == "__main__":
     Create a text file named teams.txt that includes the name of a team, followed by the players on that team. List 
     all three teams and their players.
     '''
+
+    file = open("teams.txt", "w")
+    file.write("Sharks\n")
+    count = 0
+    for item in Sharks:
+        file.write("Player: {}, is Experienced: {},"
+                   " name of guardians: {}\n".format(Sharks[count][0], Sharks[count][1], Sharks[count][2]))
+        count += 1
+    file.write("\n")
+    file.write("Dragons\n")
+    count = 0
+    for item in Dragons:
+        file.write("Player: {}, is Experienced: {},"
+                   " name of guardians: {}\n".format(Dragons[count][0], Dragons[count][1], Dragons[count][2]))
+        count += 1
+    file.write("\n")
+    file.write("Raptors\n")
+    count = 0
+    for item in Raptors:
+        file.write("Player: {}, is Experienced: {},"
+                   " name of guardians: {}\n".format(Raptors[count][0], Raptors[count][1], Raptors[count][2]))
+        count += 1
+    file.write("\n")
 
     '''
     In the list of teams, include the team name on one line, followed by a separate line for each player. Include the 
